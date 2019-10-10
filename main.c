@@ -20,7 +20,17 @@ int get_max(int a, int b)
 	if (a>b) return (a);
 	else return (b);
 }
-int main()
-{
+int main(int argc, char *argv[]) {
+	int x, y;
+	int output;
+	
+	x = 2;
+	y = 5;
+	
+	output = sumTwo(x, y);
+	printf("sumTwo : %d\n", output);
+	printf("square:%i\n",square(x));
+	printf("get_max:%i\n", get_max(x,y));
+	
 	return 0;
-}
+	}
