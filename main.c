@@ -34,3 +34,4 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 	}
+	뭐야 시발 하나도 모르겠어! 
