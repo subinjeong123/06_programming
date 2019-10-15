@@ -4,15 +4,30 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop*/
 
-int main(void)
+int factorial(int n)
 {
+	int res=1;
 	int i;
-	int max=45;
-	
-	srand((unsigned) time(NULL) );
-	for (i = 0; i < 6; i++ ) 
+	for(i=1;i<=n;i++)
 	{
-		printf("%d " , 1+rand()%max); 
+		res = res * i;
 	}
+	return res;
+}
+int calCombination(int n, int r)
+{
+	int high, low;
+	high = factorial(n);
+	low = factorial(n-r)*factorial(r);
+	return (high/low);
+}
+int main(int argc, char *argv[]) {
+	int n, r;
+	int res;
+	printf("print n and r");
+	scanf("%d %d", &n, &r);
+	res = calCombination(n, r);
+	printf("combination result is %d\n", res);
+	
 		return 0;
 	}
